@@ -4,7 +4,7 @@
 
 > ReactJS is a popular open-source JavaScript library used for building user interfaces on the front end. ReactJS solves the problem of performance-intensive DOM operations rendering slowly in an application. Web pages or apps that have data that change over time at high rates requires DOM updates to be very fast and to be reflected in other parts of the user interface that use the same data. ReactJS addresses this problem via a concept called virtual DOM, where it only updates DOM elements that have changed, all without having the page reload. This reduces DOM operations and refreshes, thus considerably improving a site or app's performance.
 
-1. What does it mean to think in react?
+2. What does it mean to think in react?
 
 > Thinking in React, or thinking about building components and applications with React, involves the following steps:
 >
@@ -14,14 +14,14 @@
 > 4. Identify where state should live
 > 5. Add inverse data flow
 
-1. Describe state.
+3. Describe state.
 
 > State is a plain JavaScript object that holds information that influences the output of render. State is managed _within_ components, similar to variables declared within a function.
 
-1. Describe props.
+4. Describe props.
 
 > Like state, props are plain JavaScript objects that hold information that influence the output of render. Props, short for "properties," get passed _to_ a component, similar to function parameters.
 
-1. What are side effects, and how do you sync effects in a React component to state or prop changes?
+5. What are side effects, and how do you sync effects in a React component to state or prop changes?
 
 > Side effects, or "effects," are operations that can affect other components but can't be done during rendering. Examples of effects include data fetching, subscriptions, or manually changing the DOM from React components. You sync effects in a React component to state or prop changes using the Effect Hook `useEffect`, by passing in a an array as an optional second argument to `useEffect` (the first argument is a function containing imperative code that will run after the render is committed to the screen). The array contains the values that the effect depends on; the effect will be fired if one of the values in the array, also known as the effect's dependencies, changes.
