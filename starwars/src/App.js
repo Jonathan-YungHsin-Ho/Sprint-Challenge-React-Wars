@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import Nav from './components/Nav';
 import CharacterCard from './components/CharacterCard';
 // import './App.css';
+
+// const GlobalStyle = createGlobalStyle`
+// @font-face {
+//   font-family: 'StarWarsFont';
+//   src: url("./STARWARS/STARWARS.TTF") format("ttf");
+// }
+// `;
 
 const StyledHeader = styled.h1`
   width: 100%;
@@ -15,6 +22,7 @@ const StyledHeader = styled.h1`
   padding: 20px 0 10px 0;
   text-align: center;
   text-transform: uppercase;
+  // font-family: 'StarWarsFont', Arial, sans-serif;
   font-size: 60px;
   text-shadow: -2px -2px 0 #ffe919, 2px -2px 0 #ffe919, -2px 2px 0 #ffe919,
     2px 2px 0 #ffe919;
@@ -23,7 +31,8 @@ const StyledHeader = styled.h1`
 const CardWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
-  margin-top: 170px;
+  // margin-top: 170px;
+  margin-top: 180px;
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +65,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <StyledHeader className="Header">React Wars</StyledHeader>
+      {/* <GlobalStyle /> */}
+      {/* <StyledHeader className="Header">React Wars</StyledHeader> */}
       <Nav
         page={page}
         pageCount={pageCount}
