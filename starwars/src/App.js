@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+import Nav from './components/Nav';
 import CharacterCard from './components/CharacterCard';
-import './App.css';
+// import './App.css';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -25,7 +27,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      {/* <Nav /> */}
+      <Nav />
       <div>
         {people.map(character => {
           return <CharacterCard character={character} />;
