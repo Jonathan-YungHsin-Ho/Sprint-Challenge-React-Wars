@@ -64,7 +64,7 @@ export default function Nav(props) {
           </StyledButton>
         )}
         <PageTxt>Page: {props.page}</PageTxt>
-        {props.page < props.pageCount && (
+        {props.page < props.pageCount / 10 && (
           <StyledButton onClick={() => props.nextPage()}>
             {'\u21E8'}
           </StyledButton>
