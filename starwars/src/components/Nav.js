@@ -15,7 +15,7 @@ const NavBar = styled.div`
 `;
 
 const ImgWrapper = styled.div`
-  width: 50%;
+  max-width: 510px;
 `;
 
 const CenterImg = styled.img`
@@ -32,6 +32,8 @@ const Center = styled.div`
 
 const PageTxt = styled.div`
   font-size: 18px;
+  min-width: 80px;
+  text-align: center;
 `;
 
 const StyledButton = styled.button`
