@@ -5,6 +5,16 @@ import Nav from './components/Nav';
 import CharacterCard from './components/CharacterCard';
 // import './App.css';
 
+const StyledHeader = styled.h1`
+  background-color: black;
+  color: #ffe919;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+`;
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -26,7 +36,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <StyledHeader className="Header">React Wars</StyledHeader>
       <Nav />
       <div>
         {people.map(character => {
