@@ -6,6 +6,10 @@ import CharacterCard from './components/CharacterCard';
 // import './App.css';
 
 const StyledHeader = styled.h1`
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
   background-color: black;
   color: #ffe919;
   margin: 0;
@@ -13,6 +17,15 @@ const StyledHeader = styled.h1`
   text-align: center;
   text-transform: uppercase;
   font-size: 60px;
+`;
+
+const CardWrapper = styled.div`
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `;
 
 const App = () => {
@@ -38,11 +51,11 @@ const App = () => {
     <div className="App">
       <StyledHeader className="Header">React Wars</StyledHeader>
       <Nav />
-      <div>
+      <CardWrapper>
         {people.map(character => {
           return <CharacterCard character={character} />;
         })}
-      </div>
+      </CardWrapper>
     </div>
   );
 };

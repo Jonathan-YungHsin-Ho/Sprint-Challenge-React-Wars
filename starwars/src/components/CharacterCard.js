@@ -23,8 +23,7 @@ const StyledH1 = styled.h1`
 `;
 
 const ListWrapper = styled.ul`
-  // border: 1px solid blue;
-  opacity: 0.5;
+  opacity: 0.6;
 `;
 
 const StyledLi = styled.li`
