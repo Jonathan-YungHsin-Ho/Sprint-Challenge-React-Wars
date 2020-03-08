@@ -24,48 +24,63 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [x] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-- [ ] What does it mean to _think_ in react?
+> ReactJS is a popular open-source JavaScript library used for building user interfaces on the front end. ReactJS solves the problem of performance-intensive DOM operations rendering slowly in an application. Web pages or apps that have data that change over time at high rates requires DOM updates to be very fast and to be reflected in other parts of the user interface that use the same data. ReactJS addresses this problem via a concept called virtual DOM, where it only updates DOM elements that have changed, all without having the page reload. This reduces DOM operations and refreshes, thus considerably improving a site or app's performance.
 
-- [ ] Describe state.
+- [x] What does it mean to _think_ in react?
 
-- [ ] Describe props.
+> Thinking in React, or thinking about building components and applications with React, involves the following steps:
+>
+> 1. Break the User Interface into a component hierarchy
+> 2. Build a static version in React
+> 3. Identify the minimal (but complete) representation of the UI state
+> 4. Identify where state should live
+> 5. Add inverse data flow
 
-- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+- [x] Describe state.
+
+> State is a plain JavaScript object that holds information that influences the output of render. State is managed _within_ components, similar to variables declared within a function.
+
+- [x] Describe props.
+
+> Like state, props are plain JavaScript objects that hold information that influence the output of render. Props, short for "properties," get passed _to_ a component, similar to function parameters.
+
+- [x] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+> Side effects, or "effects," are operations that can affect other components but can't be done during rendering. Examples of effects include data fetching, subscriptions, or manually changing the DOM from React components. You sync effects in a React component to state or prop changes using the Effect Hook `useEffect`, by passing in a an array as an optional second argument to `useEffect` (the first argument is a function containing imperative code that will run after the render is committed to the screen). The array contains the values that the effect depends on; the effect will be fired if one of the values in the array, also known as the effect's dependencies, changes.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Change directories into `./starwars` (`cd starwars`) and run `yarn install` or `npm install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `yarn start` or `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-Follow these steps for completing your project.
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [x] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [x] Change directories into `./starwars` (`cd starwars`) and run `yarn install` or `npm install` to retrieve all needed dependencies.
+- [x] Once you have installed the _node_modules_, run `yarn start` or `npm start` to get your server up and running.
+- [x] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+      Follow these steps for completing your project.
+- [x] Implement the project on this Branch, **committing progress & changes often.**
+- [x] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request.
 - [ ] PM then will count the HW as done by merging the branch back into master.
-
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-- [ ] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen. 
-- [ ] Follow the documentation to learn how to fetch a list of "people". However, don't spend _too_ long on this. Here is a link for you to follow if you've looked around the docs for about 15 minutes or so and haven't found where to go - [Secret Link to Awesomeness 🤫](https://swapi.co/documentation#people).
-- [ ] Set the data you fetch to state.
-- [ ] Map over the list and render a component for each character on the page.
-- [ ] You must display at least one element for each star wars character in the data set.
-- [ ] The elements must be styled with either SemanticUI or styled-components - don't rely on browser default styles.
+- [x] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen.
+- [x] Follow the documentation to learn how to fetch a list of "people". However, don't spend _too_ long on this. Here is a link for you to follow if you've looked around the docs for about 15 minutes or so and haven't found where to go - [Secret Link to Awesomeness 🤫](https://swapi.co/documentation#people).
+- [x] Set the data you fetch to state.
+- [x] Map over the list and render a component for each character on the page.
+- [x] You must display at least one element for each star wars character in the data set.
+- [x] The elements must be styled with either SemanticUI or styled-components - don't rely on browser default styles.
 
 #### Required best practices:
 
@@ -75,16 +90,16 @@ Your finished project must include all of the following requirements:
 - [ ] Spell-check.
 - [ ] Schedule time to review, refine and reassess your work.
 
-
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
 
 ## Stretch Problems
 
 - [ ] Add at least one test using a testing tool:
+
   - [react-testing-library](https://github.com/testing-library/react-testing-library#basic-example)
   - [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html)
 
-- [ ] Build a pagination system that will allow you to load the next page of data.
+- [x] Build a pagination system that will allow you to load the next page of data.
   - `console.log()` the data coming back from the server.
   - Notice that there are `next` and `previous` fields that give you a URL.
   - You can build a function that will get characters called `getCharacters` that you can use dynamically to get the next or previous set of characters. You would need to supply it with the proper fields, and you'll need to set up more state to do this.
